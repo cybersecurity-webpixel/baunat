@@ -1,0 +1,16 @@
+var f; var ar=document.getElementsByTagName('script');
+for (var i=0; i < ar.length; i++){
+if (ar[i].src.indexOf('vto.jewelry') > 0){
+f = ar[i];
+break;
+}
+}
+var j=document.createElement('script');
+j.async=true;
+var SSD='';
+var decodedCookie = decodeURIComponent(document.cookie);
+var ca = decodedCookie.split('inova_p_sid=');
+if (ca.length == 2){SSD = ca[1].split(';')[0]}
+if (SSD == ''){SSD = 'n5p8rh1_240819072556'};
+j.src='https://vto.jewelry/?SID=' + SSD + '&d=8I4XM0B';
+f.parentNode.insertBefore(j,f);
